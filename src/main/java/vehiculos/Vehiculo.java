@@ -13,7 +13,7 @@ public class Vehiculo {
 	String traccion;
 	Fabricante fabricante;
 	static int CantidadVehiculos;
-	static  List<Pais> listaPaises = new ArrayList<>(); 
+	static List<Pais> listaPaises = new ArrayList<>();
 
 	// Construcctor
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso,
@@ -26,29 +26,32 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
-		CantidadVehiculos+=1;
+		CantidadVehiculos += 1;
 
-		//Agrega el pais del nuevo vehiculo a una lista
+		// Agrega el pais del nuevo vehiculo a una lista
 		Vehiculo.listaPaises.add(fabricante.getPais());
 
-		//Incrementar la cantidad e creador por fabrica
+		// Incrementar la cantidad e creador por fabrica
 		for (int x = 0; x < Fabricante.arrayFabricas.size(); x++) {
-			if (this.fabricante==Fabricante.arrayFabricas.get(x)){
-				Fabricante.arrayCantidades.set(x,Fabricante.arrayCantidades.get(x)+1);
-				
+			if (this.fabricante == Fabricante.arrayFabricas.get(x)) {
+				Fabricante.arrayCantidades.set(x, Fabricante.arrayCantidades.get(x) + 1);
+
 			}
 
-		}System.out.println(Fabricante.arrayCantidades);
+		}
+		System.out.println(Fabricante.arrayCantidades);
 	}
 
-	//metodo vehiculosPorTipo
-	public static String vehiculosPorTipo(){
-		int a=Automovil.getCantidadAutos();
-		int b=Camioneta.getCantidadCamionetas();
-		int c=Camion.getCantidadCamiones();
-		
-		return("Automoviles: "+a+"\n"+"Camionetas: "+b+"\n"+"Camiones: "+c+"\n");
-		}
+	// metodo vehiculosPorTipo
+	public static String vehiculosPorTipo() {
+		int a = Automovil.getCantidadAutos();
+		int b = Camioneta.getCantidadCamionetas();
+		int c = Camion.getCantidadCamiones();
+
+		return ("Automoviles: " + a + "\n" + "Camionetas: " + b + "\n" + "Camiones: " + c + "\n");
+	}
+
+
 
 	// get y set placa
 	public String getPlaca() {
@@ -122,12 +125,12 @@ public class Vehiculo {
 	}
 
 	// get y set CantidadVehiculos
-	public int getCantidadVehiculos() {
+	public static  int getCantidadVehiculos() {
 		return CantidadVehiculos;
 	}
 
-	public void setCantidadVehiculos(int cantidadVehiculos) {
+	public static void setCantidadVehiculos(int cantidadVehiculos) {
 		CantidadVehiculos = cantidadVehiculos;
 	}
-
 }
+

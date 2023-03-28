@@ -34,7 +34,7 @@ public class Fabricante {
 	}
 	
 	//Metodo fabricaMayorVentas
-	static Fabricante fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		int mayor=Collections.max(arrayCantidades);		
 		for (int x = 0; x < Fabricante.arrayCantidades.size(); x++) {
 			if (arrayCantidades.get(x)==mayor) {

@@ -51,15 +51,13 @@ public class Pais {
 			arrayCantidades[i] = (int) cantidades.get(i);
 
 
-		// Recorrer arreglo y ver si no es así
 		int indiceDelMayor = 0;
 		for (int x = 1; x < arrayCantidades.length; x++) {
 			if (arrayCantidades[x] > arrayCantidades[indiceDelMayor]) {
 				indiceDelMayor = x;
 			}
 		}
-		// Ahora podemos obtener el mayor usando la posición
-		int mayor = arrayCantidades[indiceDelMayor];
+		// Ahora podemos obtener el mayor usando la posicion
 		int indice = indiceDelMayor;
 		//System.out.println(Vehiculo.listaPaises.get(indice).getNombre());
 		return(Vehiculo.listaPaises.get(indice));
